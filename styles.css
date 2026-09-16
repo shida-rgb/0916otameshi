@@ -1,0 +1,51 @@
+:root {
+  --color-bg: #0f1419;
+  --color-surface: #1a2332;
+  --color-text: #e7ecf3;
+  --color-muted: #8b9cb3;
+  --color-accent: #6ee7b7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+
+  .page__title {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .page__lead {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 1.05rem;
+  }
+}
+
+@media (any-hover: hover) {
+  .page {
+    .page__title {
+      transition: color 0.2s ease;
+    }
+
+    &:hover .page__title {
+      color: var(--color-accent);
+    }
+  }
+}
